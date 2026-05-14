@@ -450,6 +450,20 @@ jet_data = {
 
 //#startcode
 
+let style = document.createElement('style');
+style.type = 'text/css';
+style.id = 'dynamic-style';
+
+style.innerHTML = `
+  .campaign_trail_start_emphasis {
+    background-color: #F65E5E;
+  }
+  a:-webkit-any-link {
+    color: #000000;
+  }
+`;
+
+document.head.appendChild(style);
 
 
 nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#b51314";
