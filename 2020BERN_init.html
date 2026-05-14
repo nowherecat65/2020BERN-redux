@@ -1,20 +1,4 @@
-e = campaignTrail_temp;
-
-nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#b51314";
-
-nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#f65e5e";
-
-document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
-
-$("#game_window")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_window;
-
-$(".container")[0].style.backgroundColor = "#ec3e3d";
-
-document.getElementById("header").src = "https://www.newcampaigntrail.com/static/images/bernie_1.png";
-
-document.body.background = "../static/images/berniebg.png";
-
-e.election_json = [
+campaignTrail_temp.election_json = [
     {
         "model": "campaign_trail.election",
         "pk": 21,
@@ -29,45 +13,9 @@ e.election_json = [
             "no_electoral_majority_image": "../static/images/2012-no-majority.jpg"
         }
     }
-];
+]
 
-e.temp_election_list = [
-    {
-        "id": 21,
-        "year": 2020,
-        "is_premium": 0,
-        "display_year": "2020BERN"
-    }
-];
-
-e.credits = "Environmental_Cap104";
-
-e.global_parameter_json = [
-    {
-        "model": "campaign_trail.global_parameter",
-        "pk": 1,
-        "fields": {
-            "vote_variable": 1.125,
-            "max_swing": 0.12,
-            "start_point": 0.94,
-            "candidate_issue_weight": 10,
-            "running_mate_issue_weight": 3,
-            "issue_stance_1_max": -0.71,
-            "issue_stance_2_max": -0.3,
-            "issue_stance_3_max": -0.125,
-            "issue_stance_4_max": 0.125,
-            "issue_stance_5_max": 0.3,
-            "issue_stance_6_max": 0.71,
-            "global_variance": 0.01,
-            "state_variance": 0.005,
-            "question_count": 25,
-            "default_map_color_hex": "#C9C9C9",
-            "no_state_map_color_hex": "#999999"
-        }
-    }
-];
-
-e.candidate_json = [
+campaignTrail_temp.candidate_json = [
     {
         "model": "campaign_trail.candidate",
         "pk": 300,
@@ -365,9 +313,9 @@ e.candidate_json = [
             "partner": "0"
         }
     }
-];
+]
 
-e.running_mate_json = [
+campaignTrail_temp.running_mate_json = [
     {
         "model": "campaign_trail.running_mate",
         "pk": 2001,
@@ -440,6 +388,82 @@ e.running_mate_json = [
             "running_mate": 1011
         }
     }
-];
+]
 
-campaignTrail_temp.opponents_default_json = JSON.parse("[{\"election\": 21, \"candidates\": [300, 301, 302]}]");
+campaignTrail_temp.credits = "Environmental_Cap104"
+
+campaignTrail_temp.global_parameter_json = [
+    {
+        "model": "campaign_trail.global_parameter",
+        "pk": 1,
+        "fields": {
+            "vote_variable": 1.125,
+            "max_swing": 0.12,
+            "start_point": 0.94,
+            "candidate_issue_weight": 10,
+            "running_mate_issue_weight": 3,
+            "issue_stance_1_max": -0.71,
+            "issue_stance_2_max": -0.3,
+            "issue_stance_3_max": -0.125,
+            "issue_stance_4_max": 0.125,
+            "issue_stance_5_max": 0.3,
+            "issue_stance_6_max": 0.71,
+            "global_variance": 0.01,
+            "state_variance": 0.005,
+            "question_count": 25,
+            "default_map_color_hex": "#C9C9C9",
+            "no_state_map_color_hex": "#999999"
+        }
+    }
+]
+
+campaignTrail_temp.opponents_default_json = [
+    {
+        "election": 21,
+        "candidates": [
+            300,
+            301,
+            302
+        ]
+    }
+]
+
+campaignTrail_temp.temp_election_list = [
+    {
+        "id": 21,
+        "year": 2020,
+        "is_premium": 0,
+        "display_year": "2020BERN"
+    }
+]
+
+jet_data = {
+    "headerColor": "#b51314",
+    "windowColor": "#f65e5e",
+    "containerColor": "#ec3e3d",
+    "innerWindowColor": "",
+    "bannerImageUrl": "https://www.newcampaigntrail.com/static/images/bernie_1.png",
+    "backgroundImageUrl": "../static/images/berniebg.png",
+    "endingTextColor": "",
+    "customQuote": ""
+}
+
+//#startcode
+
+
+
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#b51314";
+
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#f65e5e";
+
+document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
+
+$("#game_window")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_window;
+
+$(".container")[0].style.backgroundColor = "#ec3e3d";
+
+document.getElementById("header").src = "https://www.newcampaigntrail.com/static/images/bernie_1.png";
+
+document.body.background = "../static/images/berniebg.png";
+
+//#endcode
